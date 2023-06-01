@@ -13,6 +13,9 @@
 		DC5A42172A1CF14700DC97C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5A42152A1CF14700DC97C5 /* Main.storyboard */; };
 		DC5A42192A1CF14800DC97C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC5A42182A1CF14800DC97C5 /* Assets.xcassets */; };
 		DC5A421C2A1CF14800DC97C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5A421A2A1CF14800DC97C5 /* LaunchScreen.storyboard */; };
+		DC7CDC972A25B053001E0CAA /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC7CDC942A25B053001E0CAA /* click.mp3 */; };
+		DC7CDC982A25B053001E0CAA /* gamestart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC7CDC952A25B053001E0CAA /* gamestart.mp3 */; };
+		DC7CDC992A25B053001E0CAA /* intro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC7CDC962A25B053001E0CAA /* intro.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		DC5A42182A1CF14800DC97C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC5A421B2A1CF14800DC97C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC5A421D2A1CF14800DC97C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC7CDC942A25B053001E0CAA /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
+		DC7CDC952A25B053001E0CAA /* gamestart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gamestart.mp3; sourceTree = "<group>"; };
+		DC7CDC962A25B053001E0CAA /* intro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = intro.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +46,7 @@
 		DC5A42032A1CF14700DC97C5 = {
 			isa = PBXGroup;
 			children = (
+				DC7CDC932A25AFCC001E0CAA /* mp3 */,
 				DC5A420E2A1CF14700DC97C5 /* OddEvenGame2 */,
 				DC5A420D2A1CF14700DC97C5 /* Products */,
 			);
@@ -65,6 +72,16 @@
 				DC5A421D2A1CF14800DC97C5 /* Info.plist */,
 			);
 			path = OddEvenGame2;
+			sourceTree = "<group>";
+		};
+		DC7CDC932A25AFCC001E0CAA /* mp3 */ = {
+			isa = PBXGroup;
+			children = (
+				DC7CDC942A25B053001E0CAA /* click.mp3 */,
+				DC7CDC952A25B053001E0CAA /* gamestart.mp3 */,
+				DC7CDC962A25B053001E0CAA /* intro.mp3 */,
+			);
+			path = mp3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +143,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC5A421C2A1CF14800DC97C5 /* LaunchScreen.storyboard in Resources */,
+				DC7CDC972A25B053001E0CAA /* click.mp3 in Resources */,
 				DC5A42192A1CF14800DC97C5 /* Assets.xcassets in Resources */,
 				DC5A42172A1CF14700DC97C5 /* Main.storyboard in Resources */,
+				DC7CDC982A25B053001E0CAA /* gamestart.mp3 in Resources */,
+				DC7CDC992A25B053001E0CAA /* intro.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
