@@ -161,3 +161,34 @@ struct StudentP4 {
 print(StudentP4.storedTypeage)
 print(StudentP4.computedTypeName)
 
+
+protocol HomeDelegate{
+    func solveMathProblems()
+}
+
+class Me: HomeDelegate {
+    
+    var harry = MathMaster()
+    
+    func askForWork(){
+        self.harry.delegate = self
+        print("help me")
+        self.harry.didHomeWork()
+    }
+    
+    func solveMathProblems() {
+        print("Work is Done!")
+    }
+}
+
+class MathMaster {
+    var delegate: HomeDelegate?
+    
+    func didHomeWork(){
+        print("take the task")
+        self.delegate?.solveMathProblems()
+    }
+}
+
+var man = Me()
+man.askForWork()

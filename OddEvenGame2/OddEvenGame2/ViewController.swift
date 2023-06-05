@@ -15,7 +15,14 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SettingDelegate {
+    
+    func getBallCount(BallsCnt: Int) {
+        self.userBallCount = BallsCnt
+        self.comBallCount = BallsCnt
+        userBallCountLbl.text = "user \(userBallCount) 남았습니다."
+        comBallCountLbl.text = "com \(comBallCount) 남았습니다."
+    }
 
     @IBOutlet var comBallCountLbl: UILabel!
     @IBOutlet var userBallCountLbl: UILabel!
@@ -30,13 +37,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         userBallCountLbl.text = "user \(userBallCount) 남았습니다."
         comBallCountLbl.text = "com \(comBallCount) 남았습니다."
-        self.imageUiView.isHidden = true
         
+        self.imageUiView.isHidden = true
         self.play(fileName: "intro")
     }
+    
+
     
     func play(fileName : String) {
         let filePath = Bundle.main.url(forResource: fileName, withExtension: "mp3")
@@ -165,5 +173,16 @@ class ViewController: UIViewController {
     func getRandom()-> Int{
         return Int(arc4random_uniform(10)+1) // 0~9까지 난수 +1
     }
+    
+    
+    @IBAction func setBtnClicked(_ sender: UIButton) {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let settingVController = mainStoryboard.instantiateViewController(identifier: "SettingViewController") as SettingViewController
+        settingVController.settingDelegate = self
+        settingVController.modalPresentationStyle = .fullScreen
+        self.present(settingVController, animated: true, completion: nil)
+    }
+    
+
 }
 
